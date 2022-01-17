@@ -12,8 +12,8 @@ Paper:
 
 
 # Execution
- 1. `cd build` then run `cd chmod +x setup.sh`
- 2. `./setup.sh [[nVoters]]` where $nVoters is the number for voters
+ 1. `cd build` then run `chmod +x setup.sh`
+ 2. Run `./setup.sh [[nVoters]]` where $nVoters is the number for voters
  3. Check the test code in the file `test\completeTest.js`
  4. Run the local Ethereum node: `ganache-cli -l 30e6 -a [[nVoters + 2]]` 
  5. Run the command `truffle test` to view the result and the gas cost of each transaction
