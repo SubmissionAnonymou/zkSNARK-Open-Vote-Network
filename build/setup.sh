@@ -13,11 +13,12 @@ if [ ! -d "../node_modules" ]; then
 fi
 
 if [ ! -f "potfinal.ptau" ]; then
-snarkjs powersoftau new bn128 16 pot0.ptau -v
-snarkjs powersoftau contribute pot0.ptau pot1.ptau --name="First contribution" -v -e="random text"
-snarkjs powersoftau contribute pot1.ptau pot2.ptau --name="Second contribution" -v -e="some random text"
-snarkjs powersoftau beacon pot2.ptau potbeacon.ptau 0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f 10 -n="Final Beacon"
-snarkjs powersoftau prepare phase2 potbeacon.ptau potfinal.ptau -v
+#snarkjs powersoftau new bn128 16 pot0.ptau -v
+#snarkjs powersoftau contribute pot0.ptau pot1.ptau --name="First contribution" -v -e="random text"
+#snarkjs powersoftau contribute pot1.ptau pot2.ptau --name="Second contribution" -v -e="some random text"
+#snarkjs powersoftau beacon pot2.ptau potbeacon.ptau 0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f 10 -n="Final Beacon"
+#snarkjs powersoftau prepare phase2 potbeacon.ptau potfinal.ptau -v
+curl https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_16.ptau -o "potfinal.ptau"
 fi
 
 cp -r ../src/circuits/* ../circuits/
